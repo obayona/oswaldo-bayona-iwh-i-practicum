@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        a(href='/') Return to the homepage
+        h1 Create Pet
+            form(role='form' method='POST' action='/update-cobj')
+              div.form-group
+                label(for='pet_name') Name:
+                input#pet_name.form-control(type='text', name='pet_name')
+              div.form-group
+                label(for='pet_type') Description:
+                textarea#pet_type.form-control(name='pet_type', rows='4')
+              div.form-group
+                label(for='age') Age (years):
+                input#age.form-control(type='number', name='age')
+              div.form-group
+                label(for='weight') Weight (Kg.):
+                input#age.form-control(type='number', name='weight')
+              button.btn.btn-primary(type="submit") Submit

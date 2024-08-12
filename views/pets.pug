@@ -10,5 +10,8 @@ html
                 each pet in data
                     .card 
                         h2.card__name #{pet.properties.pet_name}
+                        p #{pet.properties.pet_type}
                         p #{pet.properties.age} years
                         p #{pet.properties.weight} kg.
+
+            a(href='/update-cobj') Create Pet
